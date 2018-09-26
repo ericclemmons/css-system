@@ -1,0 +1,17 @@
+{
+  "name": "web-units",
+  "version": "1.0.0",
+  "description": "A simple component library powered by css custom properties",
+  "main": "index.js",
+  "author": "Chad Donohue <chad.donohue@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^7.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
