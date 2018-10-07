@@ -1,5 +1,6 @@
 import { MDXProvider } from "@mdx-js/tag"
 import App, { Container } from "next/app"
+import Link from "next/link"
 import React from "react"
 
 import { Heading, Text } from "../components"
@@ -18,6 +19,7 @@ export default class WebUnits extends App {
 
   render() {
     const { Component, pageProps } = this.props
+
     return (
       <Container>
         <MDXProvider
@@ -27,6 +29,11 @@ export default class WebUnits extends App {
             h3: (props) => <Heading as="h3" {...props} />,
             h4: (props) => <Heading as="h4" {...props} />,
             h5: (props) => <Heading as="h5" {...props} />,
+            a: ({ href, ...rest }) => (
+              <Link href={href} prefetch>
+                <a {...rest} />
+              </Link>
+            ),
             p: (props) => <Text {...props} />,
           }}
         >
