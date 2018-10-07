@@ -1,3 +1,3 @@
-import ReadMe from "../README.md"
+import README from "../README.md"
 
-<ReadMe />
+<README />
